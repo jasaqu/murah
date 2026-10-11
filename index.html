@@ -1,73 +1,76 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Jasa Pembuatan Aplikasi Kasir UMKM — Rp100 Ribu</title>
+<title>BangunWeb – Aplikasi Siap Pakai untuk Usaha Kecil</title>
 <style>
-:root{--bg:#f8faf9;--card:#fff;--text:#112119;--muted:#5d7066;--brand:#0f9d6b;--line:#dce7e1;--soft:#e6f5ee;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1612;--card:#12221b;--text:#e8f3ee;--muted:#8fa89c;--brand:#2fd195;--line:#223a30;--soft:#143024}}
-:root[data-theme="dark"]{--bg:#0b1612;--card:#12221b;--text:#e8f3ee;--muted:#8fa89c;--brand:#2fd195;--line:#223a30;--soft:#143024}
-*{box-sizing:border-box;margin:0}
+:root{--bg:#F2F5F3;--surface:#fff;--ink:#14211D;--muted:#5B6B65;--line:#D8E0DC;--accent:#2447F5;--accent-ink:#fff;--hl:#FFD84D;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1613;--surface:#18221E;--ink:#EAF0ED;--muted:#9AABA4;--line:#2A3833;--accent:#7C93FF;--accent-ink:#0F1613}}
+:root[data-theme="dark"]{--bg:#0F1613;--surface:#18221E;--ink:#EAF0ED;--muted:#9AABA4;--line:#2A3833;--accent:#7C93FF;--accent-ink:#0F1613}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
-.w{max-width:760px;margin:0 auto;padding:0 20px}
-.btn{display:inline-block;background:var(--brand);color:#fff;padding:14px 28px;border-radius:12px;font-weight:700;text-decoration:none}
-.hero{text-align:center;padding:56px 0 40px}
-.tag{display:inline-block;background:var(--soft);color:var(--brand);padding:6px 14px;border-radius:99px;font-size:13px;font-weight:700}
-h1{font-size:clamp(28px,7vw,44px);line-height:1.2;margin:16px 0}
-h1 em{font-style:normal;color:var(--brand)}
-.hero p{color:var(--muted);margin-bottom:24px;font-size:17px}
-section{padding:32px 0}
-h2{font-size:24px;text-align:center;margin-bottom:20px}
-.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
-.c{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;text-align:center}
-.c .i{font-size:32px}.c h3{font-size:17px;margin:6px 0 2px}.c p{color:var(--muted);font-size:14px}
-.price{background:var(--card);border:2px solid var(--brand);border-radius:20px;padding:28px;text-align:center}
-.price strong{display:block;font-size:44px;color:var(--brand);margin:6px 0}
-.price small{color:var(--muted)}
-.price ul{list-style:none;padding:0;margin:16px 0 22px;text-align:left;display:inline-block}
-.price li{padding:4px 0 4px 26px;position:relative}
-.price li:before{content:"✓";position:absolute;left:0;color:var(--brand);font-weight:800}
-footer{text-align:center;color:var(--muted);font-size:14px;padding:24px 0 32px}
+*,*:before,*:after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-bottom:84px}
+.wrap{max-width:720px;margin:0 auto;padding:0 18px}
+a{color:inherit}
+.brand{font-weight:800;font-size:18px;display:flex;align-items:center;gap:8px;padding-top:26px;text-decoration:none}
+.brand i{width:14px;height:14px;background:var(--hl);border:2px solid var(--ink);display:inline-block}
+h1{font-size:clamp(30px,7.5vw,48px);line-height:1.08;letter-spacing:-.03em;margin:30px 0 0;font-weight:800}
+h1 mark{background:var(--hl);color:#14211D;padding:0 .12em}
+h2{font-size:22px;margin:34px 0 10px;line-height:1.2}
+.lead{color:var(--muted);font-size:17px;margin:14px 0 24px}
+.list{display:grid;gap:12px}
+.card{background:var(--surface);border:1.5px solid var(--line);border-radius:6px;padding:16px;display:flex;justify-content:space-between;align-items:center;gap:12px;text-decoration:none}
+.card:hover{border-color:var(--accent)}
+.card b{font-size:18px;display:block}
+.card span{color:var(--muted);font-size:14.5px}
+.card em{font-style:normal;font-weight:700;color:var(--accent);white-space:nowrap;font-size:14.5px}
+.back{display:inline-block;margin-top:18px;color:var(--muted);font-size:14.5px}
+.box{background:var(--surface);border:1.5px solid var(--line);border-radius:6px;padding:16px}
+ul.ck{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+ul.ck li{padding-left:26px;position:relative}
+ul.ck li:before{content:"✓";position:absolute;left:0;font-weight:800;color:var(--accent)}
+.price{background:var(--ink);color:var(--bg);border-radius:6px;padding:20px;margin-top:30px}
+.price s{opacity:.65}
+.price .big{font-size:36px;font-weight:800;letter-spacing:-.02em}
+.price .bonus{background:var(--hl);color:#14211D;border-radius:4px;padding:8px 10px;margin-top:12px;font-size:14.5px;font-weight:600}
+ol.st{padding-left:20px;margin:0;display:grid;gap:6px}
+.cta{position:fixed;left:0;right:0;bottom:0;padding:10px 18px calc(10px + env(safe-area-inset-bottom,0px));background:var(--bg);border-top:1px solid var(--line)}
+.btn{display:block;max-width:720px;margin:0 auto;text-align:center;background:var(--accent);color:var(--accent-ink);padding:14px;border-radius:6px;font-weight:700;font-size:16px;text-decoration:none}
+.btn:focus-visible,.card:focus-visible,.back:focus-visible,.brand:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.letter{margin-top:22px}.letter p{font-size:17px;margin:0 0 14px}.letter ul.ck{margin:0 0 14px;font-size:17px}.ps{border-left:4px solid var(--hl);padding:4px 0 4px 14px;margin-top:30px;font-size:17px}.foot{color:var(--muted);font-size:13px;padding:24px 0 10px}
 </style>
 </head>
 <body>
-<div class="w">
-<header class="hero">
-<span class="tag">📱 Jasa Pembuatan Aplikasi</span>
-<h1>Aplikasi usaha Anda siap pakai, cukup <em>Rp100 ribu</em></h1>
-<p>Kasir, laundry, mini cafe, agen pembayaran, sampai angkringan. Mudah dipakai, tanpa ribet.</p>
-<a class="btn" href="#order">Pesan Sekarang</a>
-</header>
-
-<section>
-<h2>Kami Buatkan Untuk</h2>
-<div class="g">
-<div class="c"><div class="i">🧾</div><h3>Aplikasi Kasir</h3><p>Catat penjualan &amp; stok barang</p></div>
-<div class="c"><div class="i">🧺</div><h3>Laundry</h3><p>Order, status cucian, &amp; tagihan</p></div>
-<div class="c"><div class="i">☕</div><h3>Mini Cafe</h3><p>Menu, pesanan, &amp; laporan harian</p></div>
-<div class="c"><div class="i">💳</div><h3>Agen Pembayaran</h3><p>Catat transaksi &amp; keuntungan</p></div>
-<div class="c"><div class="i">🍢</div><h3>Angkringan</h3><p>Hitung jualan cepat &amp; simpel</p></div>
-</div>
-</section>
-
-<section>
-<h2>Harga</h2>
-<div class="price">
-<small>Per aplikasi</small>
-<strong>Rp100.000</strong>
-<ul><li>Fitur sesuai jenis usaha</li><li>Tampilan simpel &amp; mudah dipakai</li><li>Laporan penjualan harian</li><li>Bantuan cara pakai</li></ul><br>
-<a class="btn" href="#order">Pesan Sekarang</a>
-</div>
-</section>
-
-<section id="order" style="text-align:center">
-<h2>Mau Pesan?</h2>
-<p style="color:var(--muted);margin-bottom:20px">Chat saja, sebutkan jenis usaha Anda.</p>
-<a class="btn" href="https://wa.me/6285788842336?text=Halo%2C%20saya%20mau%20pesan%20aplikasi%20untuk%20usaha%20saya" target="_blank" rel="noopener">Chat via WhatsApp</a>
-</section>
-<footer>© 2026 Jasa Aplikasi UMKM</footer>
-</div>
+<div class="wrap" id="app"></div>
+<div class="cta" id="cta" hidden><a class="btn" id="wa" target="_blank" rel="noopener" href="#">Chat WhatsApp Sekarang</a></div>
+<script>
+var WA="6285788842336"; // ganti dengan nomor WhatsApp kamu
+var P=[
+{id:"kasir",n:"Aplikasi Mini Kasir",s:"Catat penjualan toko tanpa buku dan kalkulator",pain:"Masih mencatat penjualan di buku? Rawan salah hitung, stok sering tidak cocok, dan untung rugi tidak jelas.",b:["Transaksi selesai dalam hitungan detik","Stok barang terpantau otomatis","Tahu untung harian tanpa menghitung manual","Bisa dipakai di HP"],i:["Input transaksi & cetak struk","Manajemen stok barang","Laporan harian & bulanan","Panduan pemakaian"],old:"Rp 500.000",p:"Rp 100.000"},
+{id:"laundry",n:"Aplikasi Laundry",s:"Nota rapi, status cucian jelas, pelanggan tidak komplain",pain:"Cucian tertukar, nota tertulis tangan hilang, dan pelanggan sering bertanya kapan selesai.",b:["Nota tercetak rapi dan profesional","Status cucian bisa dicek kapan saja","Harga per kg atau satuan dihitung otomatis","Data pelanggan tersimpan"],i:["Pembuatan nota & status cucian","Hitung harga otomatis","Database pelanggan","Laporan pendapatan"],old:"Rp 500.000",p:"Rp 100.000"},
+{id:"brilink",n:"Aplikasi Agen BRILink",s:"Pantau saldo dan untung agen setiap hari",pain:"Transaksi tarik, transfer, dan setor menumpuk di catatan. Sulit tahu untung bersih dan saldo yang pas.",b:["Semua transaksi tercatat rapi","Fee dihitung otomatis","Rekap harian dan bulanan siap lihat","Selisih saldo mudah ditemukan"],i:["Catat tarik tunai, transfer, setor","Hitung fee otomatis","Rekap harian & bulanan","Panduan pemakaian"],old:"Rp 500.000",p:"Rp 100.000"},
+{id:"kedai",n:"Aplikasi Kedai Minuman",s:"Pesanan rapi, antrean jelas, tidak ada minuman tertukar",pain:"Saat ramai, pesanan campur aduk, topping terlewat, dan pelanggan menunggu terlalu lama.",b:["Pesanan tercatat lengkap dengan topping","Antrean mudah dilihat barista","Menu dan harga mudah diubah","Tahu menu terlaris"],i:["Daftar menu, varian & topping","Antrean pesanan","Struk pembayaran","Laporan penjualan"],old:"Rp 500.000",p:"Rp 100.000"},
+{id:"landing",n:"Landing Page Simpel",s:"Satu halaman agar usahamu mudah ditemukan dan dihubungi",pain:"Pelanggan baru sulit menemukan informasi usahamu, dan kamu belum punya tempat untuk menunjukkan produk.",b:["Tampil profesional di HP","Pelanggan langsung bisa chat WhatsApp","Lokasi dan jam buka jelas","Cepat jadi"],i:["1 halaman responsif","Profil usaha & daftar produk","Tombol WhatsApp","Peta lokasi"],old:"Rp 500.000",p:"Rp 100.000"}
+];
+var app=document.getElementById("app"),cta=document.getElementById("cta"),wa=document.getElementById("wa");
+function ul(a){return '<ul class="ck">'+a.map(function(x){return '<li>'+x+'</li>'}).join("")+'</ul>'}
+function home(){
+  document.title="BangunWeb – Aplikasi Siap Pakai untuk Usaha Kecil";wa.href="https://wa.me/"+WA+"?text="+encodeURIComponent("Halo BangunWeb, saya mau tanya aplikasi untuk usaha saya.");cta.hidden=false;
+  app.innerHTML='<a class="brand" href="#"><i></i>BangunWeb</a><h1>Berhenti mencatat <mark>pakai buku</mark>. Usaha jadi lebih rapi dengan satu aplikasi.</h1><div class="letter"><p>Bapak/Ibu pemilik usaha,</p><p>Pernah pulang setelah tutup toko, lalu masih harus menghitung uang dan mencocokkan catatan? Atau pelanggan bertanya "cucian saya sudah selesai?" dan kamu sibuk mencari nota?</p><p>Catatan manual memakan waktu, mudah salah, dan membuat untung rugi tidak jelas. Padahal usaha kecil butuh waktu untuk melayani pelanggan, bukan untuk menghitung ulang.</p><p>Karena itu kami membuat aplikasi sederhana yang siap pakai untuk usaha seperti milikmu: kasir, laundry, agen BRILink, dan kedai minuman. Tanpa istilah rumit, bisa dipakai dari HP.</p><ul class="ck"><li>Sekali bayar, tanpa biaya bulanan</li><li>Didampingi lewat WhatsApp sampai kamu bisa memakainya</li><li>Disesuaikan dengan cara kerja usahamu</li></ul><p>Lihat pilihan aplikasinya di bawah, lalu chat kami kapan saja.</p></div><h2>Pilih aplikasi untuk usahamu</h2><main class="list">'+P.map(function(x){return '<a class="card" href="#'+x.id+'"><div><b>'+x.n+'</b><span>'+x.s+'</span></div><em>Lihat penawaran</em></a>'}).join("")+'</main><p class="ps"><b>P.S.</b> Bingung memilih yang mana? Chat saja, ceritakan usahamu, dan kami bantu pilihkan yang paling pas.</p><p class="foot">Harga contoh. Final dikonfirmasi setelah diskusi kebutuhan.</p>';
+}
+function offer(x){
+  document.title=x.n+" – BangunWeb";
+  app.innerHTML='<a class="brand" href="#"><i></i>BangunWeb</a><a class="back" href="#">Kembali ke semua aplikasi</a><h1>'+x.n+': <mark>'+x.s+'</mark></h1><p class="lead">'+x.pain+'</p><h2>Yang kamu dapat</h2>'+ul(x.b)+'<h2>Isi paket</h2><div class="box">'+ul(x.i)+'</div><div class="price"><s>'+x.old+'</s><div class="big">'+x.p+'</div><div>Sekali bayar, tanpa biaya bulanan</div><div class="bonus">Bonus: pendampingan pemakaian lewat WhatsApp</div></div><h2>Cara pesan</h2><ol class="st"><li>Chat kami lewat WhatsApp</li><li>Ceritakan kebutuhan usahamu</li><li>Aplikasi disiapkan dan diajarkan cara pakainya</li></ol><p class="foot">Harga contoh. Final dikonfirmasi setelah diskusi kebutuhan.</p>';
+  wa.href="https://wa.me/"+WA+"?text="+encodeURIComponent("Halo BangunWeb, saya tertarik dengan "+x.n+". Boleh tanya lebih lanjut?");
+  cta.hidden=false;
+}
+function route(){
+  var id=location.hash.slice(1),x=P.filter(function(p){return p.id==id})[0];
+  x?offer(x):home();window.scrollTo(0,0);
+}
+window.addEventListener("hashchange",route);route();
+</script>
 </body>
 </html>
